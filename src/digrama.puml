@@ -1,0 +1,18 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class Inscripcion {
+}
+
+class Materia {
+}
+
+class Alumno {
+}
+
+Inscripcion -->"*" Materia
+Inscripcion -left-> Alumno
+Alumno -->"*" Materia
+Materia -->"*" Materia
+
+@enduml
