@@ -1,14 +1,15 @@
 package domain;
 
-import java.util.List;
+import java.util.Set;
+
 import lombok.Setter;
 
 public class Inscripcion {
-    private List<Materia> materiasInscripcion;
+    private Set<Materia> materiasInscripcion;
     @Setter
     private Alumno alumno;
 
-    public Inscripcion(List<Materia> materiasInscripcion) {
+    public Inscripcion(Set<Materia> materiasInscripcion) {
         this.materiasInscripcion = materiasInscripcion;
     }
 

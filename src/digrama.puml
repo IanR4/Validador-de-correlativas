@@ -2,12 +2,24 @@
 'https://plantuml.com/sequence-diagram
 
 class Inscripcion {
+    -materiasInscripcion: Set<Materia>
+    -alumno: Alumno
+    --
+    +aprobada(): boolean
 }
 
 class Materia {
+    -nombre: String
+    -correlativas: Set<Materia>
+    --
+    +cumpleCorrelativas(Alumno alumno): boolean
 }
 
 class Alumno {
+    -nombre: String
+    -materiasAprobadas: Set<Materia>
+    --
+    +aprobo(Materia unaMateria): boolean
 }
 
 Inscripcion -->"*" Materia
