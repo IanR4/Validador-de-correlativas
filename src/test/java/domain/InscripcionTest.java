@@ -30,3 +30,20 @@ class InscripcionTest {
     }
 
 }
+
+class AlumnoTest {
+
+    @Test
+    @DisplayName( "Alumno aprobo ASI")
+    public void apruebaMateria() {
+        Materia asi = new Materia(null);
+        Materia an = new Materia(null);
+
+        Alumno alumno1 = new Alumno(Set.of(asi));
+
+        Assertions.assertTrue(alumno1.aprobo(asi));
+        Assertions.assertFalse(alumno1.aprobo(an));
+
+    }
+
+}
