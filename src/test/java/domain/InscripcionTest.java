@@ -21,11 +21,15 @@ class InscripcionTest {
         Materia am2 = new Materia(Set.of(am1, aga));
 
         Alumno alumno1 = new Alumno(Set.of(ayed, pdp, am1, aga));
+        Alumno alumno2 = new Alumno(Set.of(aga));
 
-        Inscripcion inscripcion = new Inscripcion(Set.of(dsi, am2));
-        inscripcion.setAlumno(alumno1);
+        Inscripcion inscripcion1 = new Inscripcion(Set.of(dsi, am2));
+        inscripcion1.setAlumno(alumno1);
+        Inscripcion inscripcion2 = new Inscripcion(Set.of(am2));
+        inscripcion2.setAlumno(alumno2);
 
-        Assertions.assertTrue(inscripcion.aprobada());
+        Assertions.assertTrue(inscripcion1.aprobada());
+        Assertions.assertFalse(inscripcion2.aprobada());
 
     }
 
